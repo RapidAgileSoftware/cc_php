@@ -1,0 +1,13 @@
+{
+    "package_name": "package-boilerplate",
+    "organisation": "RapidAgileSoftware",
+    "feature": "Boilerplate",
+    "namespace_prefix": "Rasta",
+    "description": "My awesome php package.",
+    "repository_url": "https://github.com/RapidAgileSoftware/package-boilerplate",
+    "developer": "Jens Krause",
+    "email": "info@rasta.online",
+    "_copy_without_render": [
+        "*.html"
+    ]
+}

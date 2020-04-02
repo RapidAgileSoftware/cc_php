@@ -1,0 +1,44 @@
+{
+    "name": "{{cookiecutter.organisation}}/{{cookiecutter.package_name}}",
+    "description": "{{cookiecutter.description}}",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "{{cookiecutter.namespace_prefix}}\\{{cookiecutter.feature}}\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "{{cookiecutter.namespace_prefix}}\\{{cookiecutter.feature}}\\Tests\\": "tests/unit"
+        }
+    },
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "codeception/codeception": "*",
+        "rasta/sniffs": "^1.0",
+        "phpunit/phpunit": "*",
+        "codeception/module-asserts": "^1.1",
+        "symfony/http-foundation": "^4.4.7"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "{{cookiecutter.repository_url}}"
+        }
+    ],
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "{{cookiecutter.developer}}",
+            "email": "{{cookiecutter.name}}"
+        }
+    ],
+    "scripts": {
+        "test": "codecept run",
+        "test:coverage": "codecept run unit --coverage --coverage-xml --coverage-html",
+        "lint": "phpcbf --standard=phpcs.xml",
+        "lint:fix": "phpcbf --standard=phpcs.xml"
+    }
+}
